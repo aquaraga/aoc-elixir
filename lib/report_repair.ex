@@ -17,8 +17,9 @@ defmodule ReportRepair do
     tuples = for i <- array, j <- array, do: {i, j}
 
     tuples
-    |> Enum.filter(fn {x, y} -> x + y == 2020 end)
-    |> Enum.map(fn {x, y} -> x * y end)
+    |> Enum.map(fn t -> Tuple.to_list(t) end)
+    |> Enum.filter(fn l -> Enum.sum(l) == 2020 end)
+    |> Enum.map(fn l -> Enum.reduce(l, fn x, y -> x * y end) end)
     |> List.first()
   end
 end
