@@ -1,6 +1,6 @@
 # AocElixir
 
-**TODO: Add description**
+Solutions for the [Advent Of Code](https://adventofcode.com/) challenges in Elixir
 
 ## Installation
 
